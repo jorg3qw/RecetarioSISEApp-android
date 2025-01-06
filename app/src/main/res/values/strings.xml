@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">RecetarioSISEApp</string>
+    <string name="tvCategoriasText">Categorías</string>
+    <string name="tvCrearRecetaText">Crear Receta</string>
+    <string name="tvFavoritosText">Favoritos</string>
+    <string name="tvMisRecetasText">Mis Recetas</string>
+    <string name="tvRecetasText">Recetas</string>
+    <string name="llTitulotvCrearRecetaText">Crear Receta</string>
+    <string name="tvNombreRecetaFormText">Nombre Receta:</string>
+    <string name="etNombreRecetaFormText">Ingrese nombre de la receta</string>
+    <string name="tvDescripcionFormText">Descripción:</string>
+    <string name="etDescripcionFormText">Ingrese Descripción de la receta</string>
+    <string name="tvCategoriasFormText">Categorias:</string>
+    <string name="tvIngredientesFormText">Lista Ingredientes:</string>
+    <string name="tvInstruccionesFormtext">Lista Instrucciones</string>
+    <string name="btCrearRecetaFormText">Crear Receta</string>
+
 </resources>

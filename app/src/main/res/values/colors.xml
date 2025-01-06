@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="madera">#8B4513</color>
+    <color name="verdementa">#98FF98</color>
+    <color name="moradooscuro">#8B00FF</color>
 </resources>
