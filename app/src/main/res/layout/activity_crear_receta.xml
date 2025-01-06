@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearRecetaActivity"
+    android:background="@color/black"
+    >
+
+    <!-- Area Contenido-->
+
+        <!-- Título y botón de volver -->
+        <LinearLayout
+            android:id="@+id/llTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?android:attr/colorPrimary"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/tvTituloCrearReceta"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:text="@string/llTitulotvCrearRecetaText"
+                android:layout_weight="3"
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivVolver"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon6"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <!-- Formulario -->
+        <TextView
+            android:id="@+id/tvNombreRecetaForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/tvNombreRecetaFormText"
+            android:textStyle="bold"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llTitulo"/>
+        <EditText
+            android:id="@+id/etNombreRecetaForm"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:hint="@string/etNombreRecetaFormText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreRecetaForm"/>
+        <TextView
+            android:id="@+id/tvDescripcionForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/tvDescripcionFormText"
+            android:textStyle="bold"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreRecetaForm" />
+        <EditText
+            android:id="@+id/etDescripcionForm"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:hint="@string/etDescripcionFormText"
+            android:lines="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescripcionForm"/>
+        <TextView
+            android:id="@+id/tvCategoriasForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/tvCategoriasFormText"
+            android:textStyle="bold"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionForm"/>
+        <Spinner
+            android:id="@+id/spCategoriasForm"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoriasForm"/>
+        <TextView
+            android:id="@+id/tvIngredientesForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/tvIngredientesFormText"
+            android:textStyle="bold"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spCategoriasForm"/>
+        <ListView
+            android:id="@+id/lvIngredientesForm"
+            android:layout_width="340dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIngredientesForm"/>
+        <TextView
+            android:id="@+id/tvInstruccionesForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/tvInstruccionesFormtext"
+            android:textStyle="bold"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lvIngredientesForm"/>
+        <ListView
+            android:id="@+id/lvInstruccionesForm"
+            android:layout_width="340dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstruccionesForm"/>
+        <Button
+            android:id="@+id/btCrearRecetaform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/btCrearRecetaFormText"
+            android:textStyle="bold"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lvInstruccionesForm" />
+
+    <!-- Menu Principal -->
+    <LinearLayout
+        android:id="@+id/llMenuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?android:attr/colorPrimary"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <!-- Recetas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivRecetas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon5" />
+
+            <TextView
+                android:id="@+id/tvRecetas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvRecetasText"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Mis Recetas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivMisRecetas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon1" />
+
+            <TextView
+                android:id="@+id/tvMisRecetas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvMisRecetasText"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Favoritos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivFavoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon2" />
+
+            <TextView
+                android:id="@+id/tvFavoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvFavoritosText"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Crear Receta -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivCrearReceta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon3" />
+
+            <TextView
+                android:id="@+id/tvCrearReceta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvCrearRecetaText"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Categorías -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivCategorias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon4" />
+
+            <TextView
+                android:id="@+id/tvCategorias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvCategoriasText"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
