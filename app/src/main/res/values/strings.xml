@@ -15,4 +15,7 @@
     <string name="tvInstruccionesFormtext">Lista Instrucciones</string>
     <string name="btCrearRecetaFormText">Crear Receta</string>
 
+    <string name="title_recetas">Recetas</string>
+    <string name="title_mis_recetas">Mis Recetas</string>
+    <string name="title_favoritos">Favoritos</string>
 </resources>

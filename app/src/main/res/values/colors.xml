@@ -5,4 +5,8 @@
     <color name="madera">#8B4513</color>
     <color name="verdementa">#98FF98</color>
     <color name="moradooscuro">#8B00FF</color>
+
+    <color name="moradooscuro_oscuro">#5A00B3</color>
+    <color name="moradooscuro_claro">#9F33FF</color>
+
 </resources>

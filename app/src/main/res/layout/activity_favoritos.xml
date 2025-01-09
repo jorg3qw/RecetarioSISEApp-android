@@ -5,25 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    >
+
+    <!-- Area Contenido-->
 
     <!-- Título y botón de volver -->
     <LinearLayout
-        android:id="@+id/llRecetas"
+        android:id="@+id/llFavorito"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="?android:attr/colorPrimary"
         android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="10dp">
 
         <TextView
-            android:id="@+id/tituloRecetas"
+            android:id="@+id/tituloFavorito"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:text="@string/title_recetas"
+            android:text="@string/title_favoritos"
             android:layout_weight="3"
             android:paddingStart="20dp"
             android:gravity="center_vertical"
@@ -36,19 +39,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/icon6"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <!-- Contenedor scrollable para las tarjetas -->
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
+        android:id="@+id/nestedScrollViewFavoritos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/llRecetas"
+        app:layout_constraintTop_toBottomOf="@id/llFavorito"
         app:layout_constraintBottom_toTopOf="@id/llMenuPrincipal">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRecetas"
+            android:id="@+id/rvFavoritos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
@@ -56,14 +59,16 @@
             tools:ignore="NotSibling" />
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Menú Principal -->
+    <!-- Menu Principal -->
     <LinearLayout
         android:id="@+id/llMenuPrincipal"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:background="?android:attr/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent">
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
 
         <!-- Recetas -->
         <LinearLayout
@@ -71,7 +76,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:background="@color/moradooscuro_claro"
             android:gravity="center">
 
             <ImageView
@@ -122,6 +126,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@color/moradooscuro_claro"
             android:gravity="center">
 
             <ImageView
@@ -190,5 +195,7 @@
                 android:textStyle="bold"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
