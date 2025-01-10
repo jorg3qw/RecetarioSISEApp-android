@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
+        <!-- Permite conexiones HTTP no seguras a 192.168.18.19 -->
         <domain includeSubdomains="true">192.168.18.19</domain>
     </domain-config>
+    <!-- Permite conexiones HTTP no seguras globalmente (opcional) -->
+    <base-config cleartextTrafficPermitted="true" />
 </network-security-config>
